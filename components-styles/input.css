@@ -1,0 +1,58 @@
+/* Input Field Component */
+
+.input-wraper{
+  width: 50%;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.input-wraper input{
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.input-label{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.input-label::after{
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  left: 0;
+  bottom: -1px;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.label-content{
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease
+}
+
+.input-wraper input:focus + .input-label .label-content, 
+.input-wraper input:valid + .input-label .label-content {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+
+.input-wraper input:focus + .input-label::after,
+.input-wraper input:valid + .input-label::after{
+  transform: translateX(0%)
+}

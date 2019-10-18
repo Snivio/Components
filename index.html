@@ -4,12 +4,30 @@
 <head>
 	<title>Parcel Sandbox</title>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="./components-styles/input.css">
 </head>
 
 <body>
-	<div id="app"></div>
+<div class="container">
 
-	<script src="src/index.js">
+	<div class="input-wraper">
+		<input
+			type="text"
+			name="name"
+			autocomplete="off"
+			required
+		>
+		<label
+			for="name"
+			class="input-label"
+		>
+	  	<span class="label-content">Name</span>
+	</label>
+	</div>
+
+</div>
+
 	</script>
 </body>
 
